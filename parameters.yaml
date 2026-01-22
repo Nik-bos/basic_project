@@ -1,0 +1,76 @@
+# =========================
+# Project base settings
+# =========================
+
+base:
+    # Name of the ML project
+    project_name: wine_quality_prediction
+    # Random seed for reproducibility
+    random_state: 1
+    # The target column (label) in the dataset
+    target_column: target
+
+# =========================
+# Dataset source
+# =========================
+
+data_source:
+    # Path to the raw/original dataset
+    local_data_path: original_data/winequality.csv
+
+# =========================
+# Load data paths
+# =========================
+
+load_data:
+    # Path where the raw dataset will be copied for processing
+    raw_dataset_path: data/raw/winequality.csv
+
+# =========================
+# Train-test split settings
+# =========================
+
+split_data:
+    # Path to save the training dataset
+    train_path: data/processed/train_winequality.csv
+    # Path to save the testing dataset
+    test_path: data/processed/test_winequality.csv
+    # Fraction of data to be used as test set
+    test_size: 0.2
+
+# =========================
+# Algorithm hyperparameters
+# =========================
+
+algorithms:
+    ElasticNet: 
+        parameters:
+            alpha: 0.88
+            l1_ratio: 0.89
+    
+    RandomForestClassifier:
+        parameters:
+            n_estimators: 100
+            max_depth: 10
+            random_state: 1
+
+# =========================
+# Path to save trained models
+# =========================
+saved_models_path: saved_models
+
+#========================= General Explanations ===========================
+
+# =========================
+# Hyperparameters explanation
+# =========================
+
+# ElasticNet:
+#     alpha: Regularization strength (larger values = stronger penalty)
+#     l1_ratio: Mix between L1 and L2 penalty
+#               0 = pure L2 (Ridge), 1 = pure L1 (Lasso), 0.5 = equal mix
+
+# RandomForestClassifier:
+#     n_estimators: Number of trees in the forest (more trees = better generalization, but slower)
+#     max_depth: Maximum depth of each tree (prevents overfitting)
+#     random_state: Seed for random number generator (ensures reproducible results)
