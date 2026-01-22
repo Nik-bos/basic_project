@@ -9,3 +9,16 @@ git init
 
 dvc init
 
+# This will create the hashed file of our dataset with name winequality.csv.dvc
+# Also, in original_data/gitignore, will add "winequality.csv".
+# Means now our winequality.csv will not get tracked by git but only the hashed file
+
+dvc add original_data/winequality.csv
+
+git add .
+
+# This will commit all the changes and notice on folders and files on left side, the color again changed to normal from green.
+git commit "first commit"
+
+# All those files or folders which are modified, we will see M written in the file.
+
