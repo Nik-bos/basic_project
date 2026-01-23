@@ -1,0 +1,9 @@
+stages:
+    load_data:
+        cmd: python src/load_data.py --parameters_path parameters.yaml
+        deps:
+            - src/load_data.py
+            - src/read_data.py
+            - parameters.yaml
+        outs:
+            - data/raw/raw_winequality.csv
