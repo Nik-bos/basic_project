@@ -1,6 +1,15 @@
-# Ignore Jupyter notebooks
+# Jupyter Notebook files
 *.ipynb
 .ipynb_checkpoints/
 
+
+
+# Python cache / compiled files
 __pycache__/
 *.pyc
+
+
+
+# Data files (tracked by DVC, not Git)
+original_data/winequality.csv
+data/raw/raw_winequality.csv
