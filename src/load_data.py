@@ -1,10 +1,10 @@
-from read_data import read_csv
+from read_data import read_csv_file
 import argparse
 
 def load_save_data(parameters_yaml_path: str):
 
     # Load data using read_csv function
-    df = read_csv(parameters_yaml_path = parameters_yaml_path)
+    df = read_csv_file(parameters_yaml_path = parameters_yaml_path)
     print("Data loaded successfully")
 
     # There are spaces between column names, removing them.
