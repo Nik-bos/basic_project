@@ -1,22 +1,54 @@
 schema: '2.0'
 stages:
   load_data:
-    cmd: python src/load_data.py --parameters_path parameters.yaml
+    cmd: python src/load_data.py --parameters_yaml_path parameters.yaml
     deps:
+    - path: original_data/winequality.csv
+      hash: md5
+      md5: 7638fc08efe545190b939044a32c118e
+      size: 85772
     - path: parameters.yaml
       hash: md5
-      md5: 915a28863d02f81237673758c6ad1445
-      size: 2176
+      md5: 1ed1f9525adf609fd95aa3681b750ee3
+      size: 2180
     - path: src/load_data.py
       hash: md5
-      md5: 125b4dfcca5b8cd3d8ea970b4c63bb36
-      size: 905
+      md5: b9aa98b8c976a1f33c2862caafae09ff
+      size: 965
     - path: src/read_data.py
       hash: md5
-      md5: 5babe761e4dda75bd8a5892e8acd438a
-      size: 997
+      md5: 2cb8b6095e8cb46dec05606d20ddd17d
+      size: 1063
     outs:
     - path: data/raw/raw_winequality.csv
       hash: md5
       md5: 67631f1c5955e125edc0d029a7fa5c6c
       size: 93598
+  split_data:
+    cmd: python src/split_data.py --parameters_yaml_path parameters.yaml
+    deps:
+    - path: data/raw/raw_winequality.csv
+      hash: md5
+      md5: 67631f1c5955e125edc0d029a7fa5c6c
+      size: 93598
+    - path: parameters.yaml
+      hash: md5
+      md5: 1ed1f9525adf609fd95aa3681b750ee3
+      size: 2180
+    - path: src/read_data.py
+      hash: md5
+      md5: 2cb8b6095e8cb46dec05606d20ddd17d
+      size: 1063
+    - path: src/split_data.py
+      hash: md5
+      md5: e7e29164fdc113bb70855ea69669f6f8
+      size: 1963
+    outs:
+    - path: data/processed/test_winequality.csv
+      hash: md5
+      md5: 7dbcda02ac75b843d5e5dbf14c5e1abd
+      size: 18856
+    - path: data/processed/train_winequality.csv
+      hash: md5
+      md5: efb89849ee4054ea874329756699e039
+      size: 74888
