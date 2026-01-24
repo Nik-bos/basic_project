@@ -29,7 +29,7 @@ def read_csv_file(parameters_yaml_path: str)-> pd.DataFrame:
 
 if __name__ == "__main__":
     args = argparse.ArgumentParser()
-    args.add_argument("--parameters_yaml_path", default = "parameters.yaml")
+    args.add_argument("--parameters_yaml_path", default = "params.yaml")
     parsed_args = args.parse_args()
     data = read_csv_file(parameters_yaml_path = parsed_args.parameters_yaml_path)
     print(data.head())

@@ -47,17 +47,19 @@ algorithms:
         parameters:
             alpha: 0.88
             l1_ratio: 0.89
-    
-    RandomForestClassifier:
-        parameters:
-            n_estimators: 100
-            max_depth: 10
-            random_state: 1
 
 # =========================
 # Path to save trained models
 # =========================
-saved_models_path: saved_models
+models_path: models
+
+reports:
+    # Path to save evaluation metrics
+    model_scores_path: reports/model_scores.json
+    # Path to save model hyperparameters
+    model_parameters_path: reports/model_parameters.json
+
+
 
 #========================= General Explanations ===========================
 

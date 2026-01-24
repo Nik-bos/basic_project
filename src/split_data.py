@@ -46,7 +46,7 @@ def split_and_save_data(parameters_yaml_path: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--parameters_yaml_path", default = "parameters.yaml")
+    parser.add_argument("--parameters_yaml_path", default = "params.yaml")
     args = parser.parse_args()
 
     # Calling the split_data function

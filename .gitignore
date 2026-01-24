@@ -2,6 +2,9 @@
 *.ipynb
 .ipynb_checkpoints/
 
+# Notebook folder
+notebooks/
+
 
 
 # Python cache / compiled files

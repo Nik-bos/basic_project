@@ -6,7 +6,7 @@ directories = [
     os.path.join("data", "raw"),
     os.path.join("data", "proceessed"),
     "notebooks",
-    "saved_models",
+    "models",
     "src"
 ]
 
