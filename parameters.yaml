@@ -24,7 +24,7 @@ data_source:
 
 load_data:
     # Path where the raw dataset will be copied for processing
-    raw_dataset_path: data/raw/winequality.csv
+    raw_dataset_path: data/raw/raw_winequality.csv
 
 # =========================
 # Train-test split settings
