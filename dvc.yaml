@@ -32,8 +32,11 @@ stages:
             - algorithms.ElasticNet.parameters.alpha
             - algorithms.ElasticNet.parameters.l1_ratio
         metrics:
-            - reports/model_scores.json
-            - reports/model_parameters.json
+            - reports/model_scores.json:
+                cache: false
+
+            - reports/model_parameters.json:
+                cache: false
         outs:
             - models/elasticnet_model.joblib
             
