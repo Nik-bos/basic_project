@@ -36,7 +36,7 @@ split_data:
     # Path to save the testing dataset
     test_path: data/processed/test_winequality.csv
     # Fraction of data to be used as test set
-    test_size: 0.3
+    test_size: 0.25
 
 # =========================
 # Algorithm hyperparameters
