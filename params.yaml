@@ -45,8 +45,10 @@ split_data:
 algorithms:
     ElasticNet: 
         parameters:
-            alpha: 0.88
-            l1_ratio: 0.89
+            # alpha: 0.88
+            # l1_ratio: 0.89
+            alpha: 0.9
+            l1_ratio: 0.4
 
 # =========================
 # Path to save trained models
